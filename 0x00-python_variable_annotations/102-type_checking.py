@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 '''
-    Type Checking 
+    Type Checking
 '''
 
 from typing import List, Tuple
