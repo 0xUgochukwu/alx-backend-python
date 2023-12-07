@@ -5,6 +5,6 @@
 '''
 
 
-def concat(str1: str, str2: str) -> str:
-    ''' Concatenates two strings '''
-    return str1 + str2
+def to_str(n: float) -> str:
+    ''' Returns the string representation of the float. '''
+    return str(n)
