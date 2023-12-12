@@ -4,14 +4,19 @@
     Async Comprehension
 '''
 
-from typing import List
 
-async_generator = __import__('0-async_generator').async_generator
+from asyncio import gather
+from time import time
 
 
-async def async_comprehension() -> List[float]:
+async_comprehension = __import__('1-async_comprehension').async_comprehension
+
+
+async def measure_runtime():
     '''
-        Asyncronosly generates a list of random numbers
+        Measures Asynchronous runtime
     '''
-
-    return [r async for r in async_generator()]
+    start = time()
+    await gather(*[async_comprehension() for _ in range(4)])
+    end = time()
+    return (end - start)
