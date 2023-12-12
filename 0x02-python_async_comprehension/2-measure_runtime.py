@@ -17,6 +17,6 @@ async def measure_runtime():
         Measures Asynchronous runtime
     '''
     start = time()
-    await gather(*[async_comprehension() for _ in range(4)])
+    await gather(*(async_comprehension() for _ in range(4)))
     end = time()
     return (end - start)
