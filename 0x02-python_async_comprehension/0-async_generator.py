@@ -7,10 +7,10 @@
 
 from asyncio import sleep
 from random import uniform
-from typing import AsyncGenerator
+from typing import Generator
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
+async def async_generator() -> Generator[float, None, None]:
     '''
         Asyncronosly generates random numbers
     '''
